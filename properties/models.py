@@ -8,7 +8,11 @@ class Property(models.Model):
     size_sqft = models.PositiveIntegerField()
     bedrooms = models.PositiveIntegerField()
     description = models.TextField()
-    image_url = models.URLField(max_length=1000)
+    image = models.ImageField(
+    upload_to="properties/",
+    blank=True,
+    null=True,
+)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
