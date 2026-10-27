@@ -66,7 +66,7 @@ luxury_estates_backend/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/26nikitachhattani/luxury_estates_backend
 cd luxury_estates_backend
 ```
 
@@ -96,22 +96,15 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Ensure `requirements.txt` includes the packages used by the project, such as Django, Django REST Framework, django-cors-headers, and Pillow if image uploads are enabled.
 
-### 4. Configure environment variables
-
-Configure database credentials, secret keys, and other environment-specific settings according to your Django settings.
-
-If your project uses a `.env` file, create it using your local configuration. Do not commit production secrets or credentials.
-
-### 5. Apply database migrations
+### 4. Apply database migrations
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 6. Create an administrator
+### 5. Create an administrator
 
 ```bash
 python manage.py createsuperuser
@@ -119,7 +112,7 @@ python manage.py createsuperuser
 
 Use this account for authorized administrative operations, subject to the authentication mechanism configured by the project.
 
-### 7. Start the development server
+### 6. Start the development server
 
 ```bash
 python manage.py runserver
